@@ -1,9 +1,14 @@
-package myMath;
+package myMath.Ex1Testing;
 /**
  *
 
  */
 import static org.junit.jupiter.api.Assertions.*;
+
+import myMath.ComplexFunction;
+import myMath.Monom;
+import myMath.Polynom;
+import myMath.function;
 import org.junit.jupiter.api.Test;
 
 class ComplexFunctionTest {

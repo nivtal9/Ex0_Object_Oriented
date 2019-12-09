@@ -1,4 +1,7 @@
-package myMath;
+package myMath.Ex1Testing;
+import myMath.Monom;
+import myMath.Polynom;
+import myMath.Polynom_able;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 /**
