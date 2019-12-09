@@ -1,5 +1,5 @@
-package myMath.Ex1Testing;
-import myMath.Monom;
+package Ex1Testing;
+import Ex1.Monom;
 import org.junit.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.ArrayList;

@@ -1,18 +1,18 @@
-package myMath;
+package Ex1Testing;
 
 import java.util.Iterator;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import myMath.ComplexFunction;
-import myMath.Functions_GUI;
-import myMath.Monom;
-import myMath.Operation;
-import myMath.Polynom;
-import myMath.Range;
-import myMath.function;
-import myMath.functions;
+import Ex1.ComplexFunction;
+import Ex1.Functions_GUI;
+import Ex1.Monom;
+import Ex1.Operation;
+import Ex1.Polynom;
+import Ex1.Range;
+import Ex1.function;
+import Ex1.functions;
 /**
  * Note: minor changes (thanks to Amichai!!)
  * The use of "get" was replaced by iterator!
@@ -99,7 +99,7 @@ class Functions_GUITest {
 			cf3.mul(new Polynom(s3[i]));
 		}
 		
-		ComplexFunction cf = new ComplexFunction(Operation.Plus, p1,p2);
+		ComplexFunction cf = new ComplexFunction(Operation.Plus.toString(), p1,p2);
 		ComplexFunction cf4 = new ComplexFunction("div", new Polynom("x +1"),cf3);
 		cf4.plus(new Monom("2"));
 		ans.add(cf.copy());
