@@ -33,6 +33,12 @@ public class Polynom implements Polynom_able{
      * @param s: is a string represents a Polynom
      */
     public Polynom(String s) {
+        String t="";
+        for (int j = 0; j < s.length(); j++) {
+            if(s.charAt(j)!=' '){
+                t+=s.charAt(j);
+            }
+        }s=t;
         int i=0; int lastindex=0;String temp="";
         Polynom = new ArrayList<Monom>();
         try {
@@ -201,8 +207,9 @@ public class Polynom implements Polynom_able{
     @Override
     public void multiply(Monom m1) {
         Iterator<Monom> ite=Polynom.iterator();
+        Monom temp=new Monom(m1);
         while(ite.hasNext()){
-            ite.next().multipy(m1);
+            ite.next().multipy(temp);
         }
         // TODO Auto-genthiserated method stub
     }
