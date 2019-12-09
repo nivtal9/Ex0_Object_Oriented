@@ -1,7 +1,5 @@
 package Ex1;
 
-import java.util.ArrayList;
-
 public class ComplexFunction implements complex_function {
     private Operation op;
     private function right;
@@ -101,21 +99,22 @@ public class ComplexFunction implements complex_function {
         }
         return 0.0;
     }
-    public Boolean Equals(Object o){
-        boolean b=true;
-        if(o instanceof function){
-            function fun=(function)o;
-            for (double i = -20; i <20 ; i=i+0.1) {
-                if(Math.abs(this.f(i)-fun.f(i))>0.00001){
-                    b=false;
+
+    public boolean equals(Object o) {
+        boolean b = true;
+        if (o instanceof function) {
+            function fun = (function) o;
+            for (double i = -20; i < 20; i = i + 0.5) {
+                if (Math.abs(this.f(i) - fun.f(i)) > 0.00001) {
+                    b = false;
                 }
             }
-        }
-        else{
-            b=false;
+        } else {
+            b = false;
         }
         return b;
     }
+
     @Override
     public function copy() {
         function fun = new ComplexFunction(this);
@@ -125,9 +124,9 @@ public class ComplexFunction implements complex_function {
     public ComplexFunction(function f1) {
         if (f1 instanceof ComplexFunction) {
             ComplexFunction co = (ComplexFunction) f1;
-            right=co.right().copy();
-            left=co.left().copy();
-            op=co.getOp();
+            right = co.right().copy();
+            left = co.left().copy();
+            op = co.getOp();
         } else {
             right = null;
             left = f1.copy();
@@ -146,7 +145,8 @@ public class ComplexFunction implements complex_function {
     }
 
     private Operation Operation_String(String s) {
-        switch (s.toLowerCase()) {
+        String st=s.toLowerCase();
+        switch (st) {
             case "plus":
                 return Operation.Plus;
             case "mul":
@@ -154,6 +154,8 @@ public class ComplexFunction implements complex_function {
             case "times":
                 return Operation.Times;
             case "div":
+                return Operation.Divid;
+            case "divid":
                 return Operation.Divid;
             case "max":
                 return Operation.Max;
@@ -172,26 +174,68 @@ public class ComplexFunction implements complex_function {
 
     private String String_Operation(Operation o) {
         switch (o) {
-            case Times: return "Times";
-            case Error: return "Error";
-            case Comp: return "Comp";
-            case Min: return "Min";
-            case Max: return "Max";
-            case Divid: return "Div";
-            case Plus: return "Plus";
-            default: throw new RuntimeException("Invalid Operation");
+            case Times:
+                return "Times";
+            case Error:
+                return "Error";
+            case Comp:
+                return "Comp";
+            case Min:
+                return "Min";
+            case Max:
+                return "Max";
+            case Divid:
+                return "Div";
+            case Plus:
+                return "Plus";
+            default:
+                throw new RuntimeException("Invalid Operation");
         }
     }
+
     @Override
-    public String toString(){
-        if(getOp()==Operation.None){
+    public String toString() {
+        if (getOp() == Operation.None) {
             return left().toString();
         }
-        return String_Operation(getOp())+"("+left()+", "+right()+")";
+        return String_Operation(getOp()) + "(" + left() + ", " + right() + ")";
     }
-
     @Override
-    public function initFromString(String s) {return null;
-
+    public function initFromString(String s) {
+        ComplexFunction c=null;
+        try {
+            if (s.lastIndexOf(')')==s.length()-1) {
+                String st=s.substring(0,s.indexOf('('));
+                Operation o=Operation_String(st);
+                int BracketCounter = 0;
+                int j = 0;
+                boolean flag = true;
+                for (int k = s.indexOf('(')+1; k < s.length() - 1 && flag; k++) {
+                    if(s.charAt(k)=='('){
+                        BracketCounter--;
+                    }
+                    if(s.charAt(k)==')'){
+                        BracketCounter++;
+                    }
+                    if (BracketCounter == 0 && s.charAt(k) == ',') {
+                        flag = false;
+                        j = k;
+                    }
+                }
+                int temp=s.indexOf('(')+1;
+                function l=initFromString(s.substring(temp,j));
+                int temp2=s.length()-1;
+                function r=initFromString(s.substring(j+1,temp2));
+                c=new ComplexFunction(o.toString(),l,r);
+            }
+            else{
+                String str=s.substring(s.indexOf('(')+1,s.length());
+                return new Polynom(str);
+            }
+        }
+        catch (Exception e){
+            throw new RuntimeException("Invalid String, function pattern not found/Operation not found/Invalid Polynom writen");
+        }
+        return c;
     }
 }
