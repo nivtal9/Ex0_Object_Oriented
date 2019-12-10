@@ -40,7 +40,8 @@ public class Monom implements function{
      */
     public Monom derivative() {
         if(this.get_power()==0) {return getNewZeroMonom();}
-        return new Monom(this.get_coefficient()*this.get_power(), this.get_power()-1);
+        Monom m1=new Monom(this.get_coefficient()*this.get_power(),this.get_power()-1);
+        return m1;
     }
     public double f(double x) {
         double ans=0;

@@ -85,6 +85,10 @@ public class ComplexFunction implements complex_function {
             case Times:
                 return left.f(x) * right.f(x);
             case Divid:
+                Double temp=right.copy().f(x);
+                if(temp==0){
+                    throw new RuntimeException("Cant Divid By zero!");
+                }
                 return left.f(x) / right.f(x);
             case Max:
                 return Math.max(left.f(x), right.f(x));

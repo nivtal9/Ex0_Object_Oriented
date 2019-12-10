@@ -2,9 +2,6 @@ package Ex1;
 
 import java.util.ArrayList;
 import java.util.Iterator;
-import java.util.function.Predicate;
-
-import Ex1.Monom;
 /**
  * This class represents a Polynom with add, multiply functionality, it also should support the following:
  * 1. Riemann's Integral: https://en.wikipedia.org/wiki/Riemann_integral
@@ -68,9 +65,10 @@ public class Polynom implements Polynom_able{
     }
     @Override
     public double f(double x) {
-        double ans=0;Iterator<Monom> ite=Polynom.iterator();
-        while(ite.hasNext()){
-            ans= ans+ite.next().f(x);
+        double ans=0;
+        for (int i = 0; i <Polynom.size() ; i++) {
+            Monom monom=Polynom.get(i);
+            ans+=monom.f(x);
         }
         // TODO Auto-generated method stub
         return ans;
@@ -81,7 +79,8 @@ public class Polynom implements Polynom_able{
         // TODO Auto-generated method stub
         Iterator< Monom >ite=p1.iteretor( );
         while(ite.hasNext()){
-            Monom temp=ite.next();
+            Monom t = ite.next();
+            Monom temp=new Monom(t);
             add(temp);
         }
     }
@@ -109,24 +108,25 @@ public class Polynom implements Polynom_able{
     public void substract(Polynom_able p1) {
         Polynom_able temp=new Polynom();
         temp=p1.copy();
+        temp.multiply(Monom.MINUS1);
         // TODO Auto-generated method stub
-        Iterator< Monom >ite=temp.iteretor( );
+/*        Iterator< Monom >ite=temp.iteretor( );
         while(ite.hasNext()){
             ite.next().multipy(Monom.MINUS1);
-        }
+        }*/
         add(temp);
     }
 
     @Override
     public void multiply(Polynom_able p1) {
         // TODO Auto-generated method stub
-        Iterator<Monom> ite=p1.iteretor() ;
+        Iterator<Monom>ite=p1.iteretor();
         Polynom temp=new Polynom() ;
 
         while(ite.hasNext()) {
             Polynom_able temp_2=this. copy() ;
 
-            Monom m=ite.next() ;
+            Monom m=ite.next();
             temp_2. multiply(m) ;temp. add(temp_2) ;
         }
             Polynom=temp. Polynom ;
@@ -201,7 +201,7 @@ public class Polynom implements Polynom_able{
     }
     @Override
     public Iterator<Monom> iteretor() {
-        Iterator<Monom> ite= Polynom.iterator();
+        Iterator<Monom> ite= this.Polynom.iterator();
         return ite;
     }
     @Override

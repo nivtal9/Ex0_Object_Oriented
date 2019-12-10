@@ -12,7 +12,7 @@ public class PolynomTest {
     public static boolean compDouble(double a , double b) {
         double diff = a-b;
         if (a == b || (diff < 0.01 && diff > -0.01)) return true;
-        return false; //niv tal
+        return false;
 }
     @Test
     void f() {
@@ -21,10 +21,10 @@ public class PolynomTest {
         for (int i = 0; i < polyonoms.length; i++) {
             Polynom p = new Polynom(polyonoms[i]);
             Polynom p2 = new Polynom(polyonoms2[i]);
-            p.f(0);
-            p2.f(0);
-            assertEquals(p, 0);
-            assertEquals(p2, 0);
+            double x=p.f(0);
+            double y=p2.f(0);
+            assertEquals(x, 0);
+            assertEquals(y, 0);
         }
     }
 
@@ -43,23 +43,25 @@ public class PolynomTest {
     @Test
     void substract() {
         String[] polyonoms = {"2x^3+x^2"};
+        Polynom p=null;
         for (int i = 0; i < polyonoms.length; i++) {
-            Polynom p = new Polynom(polyonoms[i]);
-            p.substract(p);
-            assertEquals(p, 0);
+            p = new Polynom(polyonoms[i]);
         }
+        p.substract(p);
+        assertEquals(p, 0);
     }
 
     @Test
     void multiply() {
         String[] polyonoms = {"2x^3+x^2"};
         String[] polyonoms2 = {"4x^6+x^4"};
+        Polynom p=null;Polynom p2=null;
         for (int i = 0; i < polyonoms.length; i++) {
-            Polynom p = new Polynom(polyonoms[i]);
-            Polynom p2 = new Polynom(polyonoms2[i]);
-            p.multiply(p);
-            assertEquals(p, p2);
+            p = new Polynom(polyonoms[i]);
+            p2 = new Polynom(polyonoms2[i]);
         }
+        p.multiply(p);
+        assertEquals(p, p2);
     }
 
     @Test

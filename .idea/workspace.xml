@@ -3,13 +3,25 @@
   <component name="ChangeListManager">
     <list default="true" id="7377f670-f608-4ea8-bd8d-781a4a79ca43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Polynom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Polynom.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/PolynomTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/PolynomTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/MonomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/MonomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CodeInsightWorkspaceSettings">
+    <option name="optimizeImportsOnTheFly" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -30,6 +42,8 @@
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -51,8 +65,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.ComplexFunctionTest">
-    <configuration name="ComplexFunctionTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PolynomTest">
+    <configuration name="MonomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <extension name="coverage">
         <pattern>
@@ -61,13 +75,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComplexFunctionTest.test (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MonomTest.derivative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <extension name="coverage">
         <pattern>
@@ -76,14 +90,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="test" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
+      <option name="METHOD_NAME" value="derivative" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComplexFunctionTest.testComplexFunction (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MonomTest.isZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <extension name="coverage">
         <pattern>
@@ -92,30 +106,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="testComplexFunction" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
+      <option name="METHOD_NAME" value="isZero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ComplexFunctionTest.testComplexFunction" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Ex1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="myMath.Ex1Testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="myMath.Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="myMath.Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="testComplexFunction" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ComplexFunctionTest.testOfString (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="MonomTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <extension name="coverage">
         <pattern>
@@ -124,20 +122,35 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.ComplexFunctionTest" />
-      <option name="METHOD_NAME" value="testOfString" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
+      <option name="METHOD_NAME" value="testEquals" />
       <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolynomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ex1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.PolynomTest" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.ComplexFunctionTest" />
-        <item itemvalue="JUnit.ComplexFunctionTest.testComplexFunction (1)" />
-        <item itemvalue="JUnit.ComplexFunctionTest.testOfString (1)" />
-        <item itemvalue="JUnit.ComplexFunctionTest.test (1)" />
-        <item itemvalue="JUnit.ComplexFunctionTest.testComplexFunction" />
+        <item itemvalue="JUnit.PolynomTest" />
+        <item itemvalue="JUnit.MonomTest" />
+        <item itemvalue="JUnit.MonomTest.testEquals" />
+        <item itemvalue="JUnit.MonomTest.isZero" />
+        <item itemvalue="JUnit.MonomTest.derivative" />
       </list>
     </recent_temporary>
   </component>
@@ -166,6 +179,27 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Ex1Testing/MonomTest.java</url>
+          <line>36</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Ex1Testing/MonomTest.java</url>
+          <line>74</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java</url>
+          <line>55</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Ex1$ComplexFunctionTest_test.ic" NAME="ComplexFunctionTest.test Coverage Results" MODIFIED="1575890784580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">

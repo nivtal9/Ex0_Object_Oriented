@@ -1,14 +1,31 @@
 package Ex1;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
+import java.util.Scanner;
 import java.util.function.IntFunction;
 
 public class Functions_GUI implements functions {
+    ArrayList<function> func=new ArrayList<>();
     @Override
     public void initFromFile(String file) throws IOException {
-
+        String line="";
+        try{
+            Scanner sc=new Scanner(new File(file));
+            while(sc.hasNextLine()){
+                line=sc.nextLine();
+                Monom m=new Monom(Monom.ZERO);
+                ComplexFunction co=new ComplexFunction(m);
+                func.add(co.initFromString(line));
+            }
+        }
+        catch (Exception i){
+            i.printStackTrace();
+            throw new IOException("Read file has been corrupted");
+        }
     }
 
     @Override
