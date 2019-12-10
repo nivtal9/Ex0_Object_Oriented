@@ -3,7 +3,8 @@ import Ex1.Monom;
 import Ex1.Polynom;
 import Ex1.Polynom_able;
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+
+import static org.junit.jupiter.api.Assertions.assertEquals;
 /**
  * This class is for testing "polynom" methods JUNIT STYLE
  */
@@ -42,24 +43,16 @@ public class PolynomTest {
 
     @Test
     void substract() {
-        String[] polyonoms = {"2x^3+x^2"};
-        Polynom p=null;
-        for (int i = 0; i < polyonoms.length; i++) {
-            p = new Polynom(polyonoms[i]);
-        }
-        p.substract(p);
-        assertEquals(p, 0);
+        Polynom p1=new Polynom("2x^3+x^2");
+        Polynom p2=new Polynom("2x^3+x^2");
+        p1.substract(p2);
+        assertEquals(true,p1.isZero());
     }
 
     @Test
     void multiply() {
-        String[] polyonoms = {"2x^3+x^2"};
-        String[] polyonoms2 = {"4x^6+x^4"};
-        Polynom p=null;Polynom p2=null;
-        for (int i = 0; i < polyonoms.length; i++) {
-            p = new Polynom(polyonoms[i]);
-            p2 = new Polynom(polyonoms2[i]);
-        }
+        Polynom p = new Polynom("2x^3+x^2");
+        Polynom p2 = new Polynom("4x^6+4x^5+x^4");
         p.multiply(p);
         assertEquals(p, p2);
     }

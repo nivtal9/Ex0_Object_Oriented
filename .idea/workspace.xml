@@ -2,18 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7377f670-f608-4ea8-bd8d-781a4a79ca43" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/GUI_params.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/function_file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Ex1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ex1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Polynom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Polynom.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/stdDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/StdDraw.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,9 +61,9 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Functions_GUITest">
-    <configuration name="Functions_GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.Functions_GUITest" />
+  <component name="RunManager" selected="JUnit.MonomTest">
+    <configuration name="TestClass" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.TestClass" />
       <module name="Ex1" />
       <extension name="coverage">
         <pattern>
@@ -95,38 +90,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MonomTest.isZero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Ex1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ex1Testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
-      <option name="METHOD_NAME" value="isZero" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MonomTest.testEquals" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Ex1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ex1Testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
-      <option name="METHOD_NAME" value="testEquals" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="PolynomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <extension name="coverage">
@@ -142,13 +105,45 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PolynomTest.multiply" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ex1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.PolynomTest" />
+      <option name="METHOD_NAME" value="multiply" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PolynomTest.substract" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Ex1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="Ex1Testing" />
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.PolynomTest" />
+      <option name="METHOD_NAME" value="substract" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Functions_GUITest" />
-        <item itemvalue="JUnit.PolynomTest" />
         <item itemvalue="JUnit.MonomTest" />
-        <item itemvalue="JUnit.MonomTest.testEquals" />
-        <item itemvalue="JUnit.MonomTest.isZero" />
+        <item itemvalue="JUnit.PolynomTest" />
+        <item itemvalue="JUnit.PolynomTest.multiply" />
+        <item itemvalue="JUnit.PolynomTest.substract" />
+        <item itemvalue="Application.TestClass" />
       </list>
     </recent_temporary>
   </component>
@@ -187,14 +182,9 @@
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Ex1Testing/MonomTest.java</url>
-          <line>74</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java</url>
-          <line>55</line>
-          <option name="timeStamp" value="8" />
+          <url>file://$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java</url>
+          <line>23</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -202,6 +192,9 @@
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Ex1$ComplexFunctionTest_test.ic" NAME="ComplexFunctionTest.test Coverage Results" MODIFIED="1575890784580" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>myMath.*</FILTER>
+    </SUITE>
+    <SUITE FILE_PATH="coverage/Ex1$PolynomTest_substract.ic" NAME="PolynomTest.substract Coverage Results" MODIFIED="1575999707667" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>Ex1Testing.*</FILTER>
     </SUITE>
   </component>
 </project>

@@ -81,7 +81,7 @@ public class Polynom implements Polynom_able{
     @Override
     public void add(Polynom_able p1) {
         // TODO Auto-generated method stub
-        Iterator< Monom >ite=p1.iteretor( );
+        Iterator<Monom>ite = p1.iteretor( );
         while(ite.hasNext()){
             Monom t = ite.next();
             Monom temp=new Monom(t);
@@ -130,7 +130,7 @@ public class Polynom implements Polynom_able{
         while(ite.hasNext()) {
             Polynom_able temp_2=this. copy() ;
 
-            Monom m=ite.next();
+            Monom m=(Monom)ite.next();
             temp_2. multiply(m) ;temp. add(temp_2) ;
         }
             Polynom=temp. Polynom ;

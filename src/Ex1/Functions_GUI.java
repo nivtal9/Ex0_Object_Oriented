@@ -1,5 +1,6 @@
 package Ex1;
 
+import java.awt.*;
 import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -7,7 +8,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
-import java.util.function.IntFunction;
 
 
 public class Functions_GUI implements functions {
@@ -48,9 +48,7 @@ public class Functions_GUI implements functions {
 
     @Override
     public void drawFunctions(int width, int height, Range rx, Range ry, int resolution) {
-/*
         Color[] Colors = {Color.blue, Color.cyan, Color.MAGENTA, Color.ORANGE, Color.red, Color.GREEN, Color.PINK};
-*/
     }
 
     @Override
@@ -59,71 +57,66 @@ public class Functions_GUI implements functions {
 
     @Override
     public int size() {
-        return 0;
+        return func.size();
     }
 
     @Override
     public boolean isEmpty() {
-        return false;
+        return func.isEmpty();
     }
 
     @Override
     public boolean contains(Object o) {
-        return false;
+        return func.contains(o);
     }
 
     @Override
     public Iterator<function> iterator() {
-        return null;
+        return func.iterator();
     }
 
     @Override
     public Object[] toArray() {
-        return new Object[0];
+        return func.toArray();
     }
 
     @Override
     public <T> T[] toArray(T[] a) {
-        return null;
-    }
-
-    @Override
-    public <T> T[] toArray(IntFunction<T[]> generator) {
-        return null;
+        return func.toArray(a);
     }
 
     @Override
     public boolean add(function function) {
-        return false;
+        return func.add(function);
     }
 
     @Override
     public boolean remove(Object o) {
-        return false;
+        return func.remove(o);
     }
 
     @Override
     public boolean containsAll(Collection<?> c) {
-        return false;
+        return func.containsAll(c);
     }
 
     @Override
     public boolean addAll(Collection<? extends function> c) {
-        return false;
+        return func.addAll(c);
     }
 
     @Override
     public boolean removeAll(Collection<?> c) {
-        return false;
+        return func.removeAll(c);
     }
 
     @Override
     public boolean retainAll(Collection<?> c) {
-        return false;
+        return func.retainAll(c);
     }
 
     @Override
     public void clear() {
-
+        this.clear();
     }
 }
