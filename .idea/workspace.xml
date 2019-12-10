@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7377f670-f608-4ea8-bd8d-781a4a79ca43" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/gson_2_8_6.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/GUI_params.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/function_file.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Ex1.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Ex1.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Polynom.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Polynom.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/PolynomTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/PolynomTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/MonomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/MonomTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/stdDraw.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/StdDraw.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,10 +44,10 @@
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
     <property name="findjar.last.used.dir" value="$PROJECT_DIR$" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/gson-2.8.6.jar!/" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -65,7 +66,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.PolynomTest">
+  <component name="RunManager" selected="Application.Functions_GUITest">
+    <configuration name="Functions_GUITest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Ex1Testing.Functions_GUITest" />
+      <module name="Ex1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="Ex1Testing.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MonomTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Ex1" />
       <extension name="coverage">
@@ -77,22 +91,6 @@
       <option name="PACKAGE_NAME" value="Ex1Testing" />
       <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="MonomTest.derivative" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="Ex1" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Ex1Testing.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="Ex1Testing" />
-      <option name="MAIN_CLASS_NAME" value="Ex1Testing.MonomTest" />
-      <option name="METHOD_NAME" value="derivative" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -146,11 +144,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Functions_GUITest" />
         <item itemvalue="JUnit.PolynomTest" />
         <item itemvalue="JUnit.MonomTest" />
         <item itemvalue="JUnit.MonomTest.testEquals" />
         <item itemvalue="JUnit.MonomTest.isZero" />
-        <item itemvalue="JUnit.MonomTest.derivative" />
       </list>
     </recent_temporary>
   </component>

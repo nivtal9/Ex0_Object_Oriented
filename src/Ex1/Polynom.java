@@ -31,6 +31,10 @@ public class Polynom implements Polynom_able{
      */
     public Polynom(String s) {
         String t="";
+        s=s.replaceAll(" ", "");
+        if(s.charAt(0)=='+'){
+            s=s.substring(1,s.length()-1);
+        }
         for (int j = 0; j < s.length(); j++) {
             if(s.charAt(j)!=' '){
                 t+=s.charAt(j);

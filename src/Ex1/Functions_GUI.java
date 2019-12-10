@@ -2,11 +2,13 @@ package Ex1;
 
 import java.io.File;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.function.IntFunction;
+
 
 public class Functions_GUI implements functions {
     ArrayList<function> func=new ArrayList<>();
@@ -27,20 +29,32 @@ public class Functions_GUI implements functions {
             throw new IOException("Read file has been corrupted");
         }
     }
-
     @Override
     public void saveToFile(String file) throws IOException {
-
+        if (!file.isEmpty()) {
+            String str = "";
+            PrintWriter w=null;
+            w = new PrintWriter(file);
+            for (int j=0; j< size(); j++) {
+                str = this.func.get(j).toString();
+                w.println(str);
+            }
+            w.close();
+        }
+        else{
+            throw new IOException("File is Empty");
+        }
     }
 
     @Override
     public void drawFunctions(int width, int height, Range rx, Range ry, int resolution) {
-
+/*
+        Color[] Colors = {Color.blue, Color.cyan, Color.MAGENTA, Color.ORANGE, Color.red, Color.GREEN, Color.PINK};
+*/
     }
 
     @Override
     public void drawFunctions(String json_file) {
-
     }
 
     @Override

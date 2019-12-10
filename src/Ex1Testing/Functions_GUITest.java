@@ -1,18 +1,11 @@
 package Ex1Testing;
 
-import java.util.Iterator;
-
+import Ex1.*;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import Ex1.ComplexFunction;
-import Ex1.Functions_GUI;
-import Ex1.Monom;
-import Ex1.Operation;
-import Ex1.Polynom;
-import Ex1.Range;
-import Ex1.function;
-import Ex1.functions;
+import java.io.IOException;
+import java.util.Iterator;
 /**
  * Note: minor changes (thanks to Amichai!!)
  * The use of "get" was replaced by iterator!
@@ -30,7 +23,7 @@ import Ex1.functions;
  *
  */
 class Functions_GUITest {
-	public static void main(String[] a) {
+	public static void main(String[] a) throws IOException {
 		functions data = FunctionsFactory();
 	//	int w=1000, h=600, res=200;
 	//	Range rx = new Range(-10,10);
