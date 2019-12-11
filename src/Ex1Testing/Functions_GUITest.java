@@ -25,12 +25,19 @@ import java.util.Iterator;
  */
 class Functions_GUITest {
     public static void main(String[] a) throws IOException {
-
-
+		String string = "function_file.txt";
+		Functions_GUI dtsr = new Functions_GUI();
+		dtsr.initFromFile(string);
+		try{
+			dtsr.drawFunctions(700, 400, new Range(-20, 20), new Range(-10, 10), 200);
+		}
+		catch (Exception e){
+			System.out.println("Failed stdr draw");
+		}
 		functions data = FunctionsFactory();
-	//	int w=1000, h=600, res=200;
-	//	Range rx = new Range(-10,10);
-	//	Range ry = new Range(-5,15);
+		//	int w=1000, h=600, res=200;
+		//	Range rx = new Range(-10,10);
+		//	Range ry = new Range(-5,15);
 //		data.drawFunctions(w,h,rx,ry,res);
 		String file = "function_file.txt";
 		String file2 = "function_file2.txt";
@@ -41,7 +48,7 @@ class Functions_GUITest {
 			data.saveToFile(file2);
 		}
 		catch(Exception e) {e.printStackTrace();}
-		
+
 		String JSON_param_file = "GUI_params.txt";
 		data.drawFunctions(JSON_param_file);
 	}
@@ -57,24 +64,24 @@ class Functions_GUITest {
 
 	//@Test
 	void testFunctions_GUI() {
-	//	fail("Not yet implemented");
+		//	fail("Not yet implemented");
 	}
 
 	//@Test
 	void testInitFromFile() {
-	//	fail("Not yet implemented");
+		//	fail("Not yet implemented");
 	}
 
 	//@Test
 	void testSaveToFile() {
-		
-		
+
+
 	}
 
 	//@Test
 	void testDrawFunctions() {
 		//_data.drawFunctions();
-	//	fail("Not yet implemented");
+		//	fail("Not yet implemented");
 	}
 
 	@Test
@@ -94,8 +101,8 @@ class Functions_GUITest {
 		for(int i=1;i<s3.length;i++) {
 			cf3.mul(new Polynom(s3[i]));
 		}
-		
-		ComplexFunction cf = new ComplexFunction(Operation.Plus.toString(), p1,p2);
+
+		ComplexFunction cf = new ComplexFunction(Operation.Plus, p1,p2);
 		ComplexFunction cf4 = new ComplexFunction("div", new Polynom("x +1"),cf3);
 		cf4.plus(new Monom("2"));
 		ans.add(cf.copy());
@@ -117,8 +124,9 @@ class Functions_GUITest {
 			min.min(f);
 		}
 		ans.add(max);
-		ans.add(min);		
+		ans.add(min);
 		return ans;
 	}
+
     }
 

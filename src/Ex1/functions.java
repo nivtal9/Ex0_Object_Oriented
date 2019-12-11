@@ -14,7 +14,7 @@ public interface functions extends Collection<function>{
      */
     public void initFromFile(String file) throws IOException;
     /**
-     *
+     * This Method save your collection functions to a txt file
      * @param file - the file name
      * @throws IOException if the file is not writable
      */
@@ -26,7 +26,7 @@ public interface functions extends Collection<function>{
      * @param height - the height of the window - in pixels
      * @param rx - the range of the horizontal axis
      * @param ry - the range of the vertical axis
-     * @param resolution - the number of samples with in rx: the X_step = rx/resulution
+     * @param resolution - the number of samples with in rx: the X_step = rx/resolution
      */
     public void drawFunctions(int width, int height, Range rx, Range ry, int resolution);
     /**

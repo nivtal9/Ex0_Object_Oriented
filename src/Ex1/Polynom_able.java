@@ -62,7 +62,7 @@ public interface Polynom_able extends cont_function{
     /**
      * Test if this Polynom is logically equals to p1.
      * @param p1
-     * @return true iff this polynom represents the same function as p1
+     * @return true if this polynom represents the same function as p1
      */
     public boolean equals (Object p1);
     /**

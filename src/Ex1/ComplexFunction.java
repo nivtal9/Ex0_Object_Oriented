@@ -216,19 +216,14 @@ if (f1 instanceof ComplexFunction) {
      * @param right - a given Function that represents the Right side of the Complex Function that we will build
      */
     public ComplexFunction(String s, function left, function right) {
-        if (left== null)
-            throw new RuntimeException("Left function argument can't be null");
-        this.left = left.copy();
-        this.right = right == null ? null : right.copy();
-        this.op = Operation_String(s);
-
-        if (right == null && op == null) {
-            this.op = Operation.None;
-        }
-        /*
         this.right = right.copy();
         this.left = left.copy();
-        this.op = Operation_String(s);*/
+        this.op = Operation_String(s);
+    }
+    public ComplexFunction(Operation o, function left, function right) {
+        this.right = right.copy();
+        this.left = left.copy();
+        this.op = o;
     }
 
     public ComplexFunction() {
