@@ -9,10 +9,15 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.Scanner;
 
-
+/**
+ * This class is for presenting Complex Functions/Functions on a GUI window and can be saved (and load) to file.
+ */
 public class Functions_GUI implements functions {
     ArrayList<function> func=new ArrayList<>();
     @Override
+    /**
+     * further description are in functions class
+     */
     public void initFromFile(String file) throws IOException {
         String line="";
         try{
@@ -29,6 +34,10 @@ public class Functions_GUI implements functions {
             throw new IOException("Read file has been corrupted");
         }
     }
+
+    /**
+     * further description are in functions class
+     */
     @Override
     public void saveToFile(String file) throws IOException {
         if (!file.isEmpty()) {
@@ -45,16 +54,25 @@ public class Functions_GUI implements functions {
             throw new IOException("File is Empty");
         }
     }
-
+    /**
+     * further description are in functions class
+     */
     @Override
     public void drawFunctions(int width, int height, Range rx, Range ry, int resolution) {
         Color[] Colors = {Color.blue, Color.cyan, Color.MAGENTA, Color.ORANGE, Color.red, Color.GREEN, Color.PINK};
     }
-
+    /**
+     * further description are in functions class
+     */
     @Override
     public void drawFunctions(String json_file) {
     }
 
+    /**
+     * all below Method are simple Method that their name describe the mention of the Method
+     * all of this Methods are implements of class Collection.
+     *
+     */
     @Override
     public int size() {
         return func.size();

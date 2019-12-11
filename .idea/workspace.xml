@@ -3,12 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7377f670-f608-4ea8-bd8d-781a4a79ca43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Ex1/Monom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Monom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Polynom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Polynom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/PolynomTest.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />

@@ -1,11 +1,23 @@
 package Ex1;
 
+/**
+ * This class represents a Complex_Function of Polynoms
+ * and can deal with arithmetic methods such as mult,divid, plus etc..
+ * Complex Function has 3 main variables such as:
+ * op - stand for Operation Like:plus,mult,divid etc..
+ * right - stand for the right function of the Complex function
+ * left - stand for the left function of the Complex Function (Can be a Complex Function as well)
+ */
 public class ComplexFunction implements complex_function {
     private Operation op;
     private function right;
     private function left;
 
     @Override
+/**
+ * This Method can get 2 Complex Functions ans give them the Plus Operation
+ * @param f1 - the function that will get the Plus Operation with our Complex Function
+ */
     public void plus(function f1) {
         function f = new ComplexFunction(getOp().toString(), left(), right());
         this.left = f.copy();
@@ -15,6 +27,10 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
+    /**
+     * This Method can get 2 Complex Functions ans give them the Mult Operation
+     * @param f1 - the function that will get the Mult Operation with our Complex Function
+     */
     public void mul(function f1) {
         function f = new ComplexFunction(getOp().toString(), left(), right());
         this.left = f.copy();
@@ -24,6 +40,10 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
+    /**
+     * This Method can get 2 Complex Functions ans give them the Divid Operation
+     * @param f1 - the function that will get the Divid Operation with our Complex Function
+     */
     public void div(function f1) {
         function f = new ComplexFunction(getOp().toString(), left(), right());
         this.left = f.copy();
@@ -33,6 +53,10 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
+    /**
+     * This Method can get 2 Complex Functions ans give them the Max Operation
+     * @param f1 - the function that will get the Max Operation with our Complex Function
+     */
     public void max(function f1) {
         function f = new ComplexFunction(getOp().toString(), left(), right());
         this.left = f.copy();
@@ -42,6 +66,10 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
+    /**
+     * This Method can get 2 Complex Functions ans give them the Min Operation
+     * @param f1 - the function that will get the Min Operation with our Complex Function
+     */
     public void min(function f1) {
         function f = new ComplexFunction(getOp().toString(), left(), right());
         this.left = f.copy();
@@ -51,6 +79,10 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
+    /**
+     * This Method can get 2 Complex Functions ans give them the Comp Operation
+     * @Param f1 - the function that will get the Comp Operation with our Complex Function
+     */
     public void comp(function f1) {
         function f = new ComplexFunction(getOp().toString(), left(), right());
         this.left = f.copy();
@@ -60,24 +92,41 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
+    /**
+     * This Method return the left side of the Complex Function
+     * @return left side of the Complex Function
+     */
     public function left() {
         return this.left;
 
     }
 
     @Override
+    /**
+     * This Method return the Right side of the Complex Function
+     * @return right side of the Complex Function
+     */
     public function right() {
         return this.right;
 
     }
 
     @Override
+    /**
+     * This Method return the Operation of the Complex Function
+     * @return Operation of Complex Function
+     */
     public Operation getOp() {
         return this.op;
 
     }
 
     @Override
+    /**
+     * This Method return the Value of the Complex Function in point x that will be given
+     * @param x - The Double number that we will placing in the Complex Function.
+     * @return the Value of the Complex Function in point x
+     */
     public double f(double x) {
         switch (getOp()) {
             case Plus:
@@ -104,6 +153,16 @@ public class ComplexFunction implements complex_function {
         return 0.0;
     }
 
+    /**
+     * This Method can get 2 Complex function and do an Equals test between them.
+     * ****WARNING**** :
+     * This Method is not fully Working Because We not testing Equals deeply,
+     * we only check the outcome of a given x dot between -20 to 20 with jumping of 0.5 every iteration
+     * and return True if the outcome will be identical with all given dots.
+     * ****WARNING****
+     * @param o Should be a Complex Function and if not, Throws an Exception
+     * @return True if the outcome will be identical with all given dots. if not return False.
+     */
     public boolean equals(Object o) {
         boolean b = true;
         if (o instanceof function) {
@@ -120,11 +179,21 @@ public class ComplexFunction implements complex_function {
     }
 
     @Override
+    /**
+     * This Method Copy a Complex Function and return a copy of it
+     * @return a Copy of a Complex Function
+     */
     public function copy() {
         function fun = new ComplexFunction(this);
         return fun;
     }
 
+    /**
+     * This Method is a Constructor Of a Complex Function. it gets a function and convert it to a Complex Function
+     * and if the Method Identify the function as a simple Polynom it will build a Complex Function with:
+     * op=None left=Polynom right=null
+     * @param f1 - a given function that will be converted into Complex Function
+     */
     public ComplexFunction(function f1) {
         if (f1 instanceof ComplexFunction) {
             ComplexFunction co = (ComplexFunction) f1;
@@ -138,6 +207,14 @@ public class ComplexFunction implements complex_function {
         }
     }
 
+    /**
+     * This Method is a Constructor Of a Complex Function. it gets 3 Variables that represents an Operation
+     * and function left and function right.
+     *
+     * @param s - a given string that represents an Operation such as Mult, Divid, Plus etc..
+     * @param left - a given Function that represents the left side of the Complex Function that we will build
+     * @param right - a given Function that represents the Right side of the Complex Function that we will build
+     */
     public ComplexFunction(String s, function left, function right) {
         this.right = right.copy();
         this.left = left.copy();
@@ -147,7 +224,11 @@ public class ComplexFunction implements complex_function {
     public ComplexFunction() {
         ComplexFunction co = null;
     }
-
+    /**
+     * This Method is a Converter from String to an Operation
+     * @param s - a String that represents an Operation
+     * @return The String s as an Operation.
+     */
     private Operation Operation_String(String s) {
         String st=s.toLowerCase();
         switch (st) {
@@ -176,6 +257,11 @@ public class ComplexFunction implements complex_function {
         }
     }
 
+    /**
+     * This Method is a Converter from Operation to a String
+     * @param o - an Operation From a given Operation Bank
+     * @return The Operation o as a String.
+     */
     private String String_Operation(Operation o) {
         switch (o) {
             case Times:
@@ -197,6 +283,10 @@ public class ComplexFunction implements complex_function {
         }
     }
 
+    /**
+     * a Simple toString Method that returns the Complex Function as a String
+     * @return - the Complex Function as a String.
+     */
     @Override
     public String toString() {
         if (getOp() == Operation.None) {
@@ -204,6 +294,14 @@ public class ComplexFunction implements complex_function {
         }
         return String_Operation(getOp()) + "(" + left() + ", " + right() + ")";
     }
+
+    /**
+     * This Method take a Given String and Building From it a ComplexFunction/Polynom
+     * This Method is Working recursively and peeling the given String from inside to outside
+     * and keeping the correct order of the String
+     * @param s - a String that represents a Complex Function
+     * @return a Complex Function Contains Operation and the Left and Right Sides of the Complex Function
+     */
     @Override
     public function initFromString(String s) {
         ComplexFunction c=null;

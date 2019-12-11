@@ -20,29 +20,50 @@ public class Monom implements function{
         this.set_coefficient(a);
         this.set_power(b);
     }
+
+    /**
+     * This Method builds a Monom From a Given Monos ot
+     * @param ot - a Monom that have coefficient and Power
+     */
     public Monom(Monom ot) {
         this(ot.get_coefficient(), ot.get_power());
     }
 
+    /**
+     * getters
+     */
     public double get_coefficient() {
         return this._coefficient;
     }
     public int get_power() {
         return this._power;
     }
+
+    /**
+     * given a string, this Method build a Monom from it
+     * implements function class
+     * @param str - given string that contains Monom
+     * @return a new Monom
+     */
     public function initFromString(String str){
         function fun = new Monom(str);
         return fun;
     }
     /**
      * this method returns the derivative monom of this.
-     * @return
+     * @return the derivative monom of this
      */
     public Monom derivative() {
         if(this.get_power()==0) {return getNewZeroMonom();}
         Monom m1=new Monom(this.get_coefficient()*this.get_power(),this.get_power()-1);
         return m1;
     }
+
+    /**
+     * This Method gets an x dot and giving the outcome of placing the x dot in the Monom
+     * @param x - double number
+     * @return the outcome of placing the x dot in the Monom
+     */
     public double f(double x) {
         double ans=0;
         double p = this.get_power();
@@ -50,6 +71,9 @@ public class Monom implements function{
         return ans;
     }
     @Override
+    /**
+     * This Method returns True if Our Monom Equals to Monom m by subtracting m from our Monom and check if the Monom isZero.
+     */
     public boolean equals(Object m){
         if(m instanceof Monom){
             Monom m2=(Monom) m;
@@ -62,12 +86,26 @@ public class Monom implements function{
         return false;
     }
     @Override
+    /**
+     * This Method returns a Copy of Our Monom in the formation of function
+     * This Method implements function class
+     */
     public function copy() {
         Monom m=new Monom(this);
         return m;
     }
+
+    /**
+     * This Method Check if given Monom is zero.
+     * @return True if our Monom is zero, false if it doesnt
+     */
     public boolean isZero() {return this.get_coefficient() == 0;}
     // ***************** add your code below **********************
+
+    /**
+     * This Method gets a String and building from it a Monom
+     * @param s - a String that Contains a Monom
+     */
     public Monom(String s) {
         try {
             int i=-1;boolean minus=false;
@@ -115,6 +153,11 @@ public class Monom implements function{
         }
     }
 
+    /**
+     * This Method adds to our Monom a Given Monom m.
+     * it will be given us a msg if Monom m is not in the same power of our Monom
+     * @param m - a Given Monom
+     */
     public void add(Monom m) {
         if(m.get_power()==this.get_power()) {
             this.set_coefficient(this.get_coefficient()+m.get_coefficient());
@@ -124,11 +167,19 @@ public class Monom implements function{
         }
     }
 
+    /**
+     * This Method Multiply our Monom by a given Monom d
+     * @param d - Given Monom
+     */
     public void multipy(Monom d) {
         this.set_coefficient(this.get_coefficient()*d.get_coefficient());
         this.set_power(this.get_power()+d.get_power());
     }
 
+    /**
+     * a Simple toString Method
+     * @return String that describe our Monom
+     */
     public String toString() {
         String ans="";
         if(this.get_power()==0) {
@@ -141,8 +192,10 @@ public class Monom implements function{
     }
     // you may (always) add other methods.
 
-    //****************** Private Methods and Data *****************
-
+    /**
+     * Private Methods and Data
+     *
+     */
 
     private void set_coefficient(double a){
         this._coefficient = a;

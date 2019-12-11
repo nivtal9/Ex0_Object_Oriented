@@ -67,6 +67,9 @@ public class Polynom implements Polynom_able{
             throw new RuntimeException("Not a valid Polynom!");
         }
     }
+    /**
+     * full discription in Polynom_able class
+     */
     @Override
     public double f(double x) {
         double ans=0;
@@ -79,6 +82,9 @@ public class Polynom implements Polynom_able{
     }
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public void add(Polynom_able p1) {
         // TODO Auto-generated method stub
         Iterator<Monom>ite = p1.iteretor( );
@@ -90,6 +96,9 @@ public class Polynom implements Polynom_able{
     }
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public void add(Monom m1) {
         Polynom_able temp=new Polynom();
         for (int i = 0; i < Polynom.size(); i++) {
@@ -109,6 +118,9 @@ public class Polynom implements Polynom_able{
     // TODO Auto-generated method stub
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public void substract(Polynom_able p1) {
         Polynom_able temp=new Polynom();
         temp=p1.copy();
@@ -122,6 +134,9 @@ public class Polynom implements Polynom_able{
     }
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public void multiply(Polynom_able p1) {
         // TODO Auto-generated method stub
         Iterator<Monom>ite=p1.iteretor();
@@ -137,6 +152,9 @@ public class Polynom implements Polynom_able{
     }
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public boolean equals(Object p1) {
         if(p1 instanceof Polynom_able) {
             Polynom_able copy2=(Polynom_able) p1;
@@ -151,12 +169,14 @@ public class Polynom implements Polynom_able{
     }
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public boolean isZero() {
         if(Polynom.size()==0) return true;
         // TODO Auto-generated method stub
         return false;
     }
-
     @Override
     public double root(double x0, double x1, double eps) {
         double ans=x0;
@@ -171,6 +191,9 @@ public class Polynom implements Polynom_able{
     // TODO Auto-generated method stub
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public Polynom_able copy() {
         Polynom_able newP= new Polynom();
         for (int i = 0; i <Polynom.size() ; i++) {
@@ -182,6 +205,9 @@ public class Polynom implements Polynom_able{
     }
 
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public Polynom_able derivative() {
         Iterator<Monom> ite=Polynom.iterator();
         Polynom_able ans=new Polynom();
@@ -204,11 +230,17 @@ public class Polynom implements Polynom_able{
         return ans;
     }
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public Iterator<Monom> iteretor() {
         Iterator<Monom> ite= this.Polynom.iterator();
         return ite;
     }
     @Override
+    /**
+     * full discription in Polynom_able class
+     */
     public void multiply(Monom m1) {
         Iterator<Monom> ite=Polynom.iterator();
         Monom temp=new Monom(m1);
@@ -218,6 +250,11 @@ public class Polynom implements Polynom_able{
         // TODO Auto-genthiserated method stub
     }
     private Monom_Comperator mc=new Monom_Comperator();
+
+    /**
+     * a Simple toString Method
+     * @return - a String that describes our Polynom
+     */
     public String toString(){
         Polynom.sort(mc);
         Iterator<Monom> ite= Polynom.iterator();String ans="";
@@ -230,7 +267,11 @@ public class Polynom implements Polynom_able{
         }
         return ans;
     }
-    public void Org(){
+
+    /**
+     * a private Method that Removes Monoms with coefficient zero from Polynom
+     */
+    private void Org(){
         for (int i = 0; i <Polynom.size() ; i++) {
             if(Polynom.get(i).get_coefficient()==0){
                 Polynom.remove(i);
