@@ -195,17 +195,20 @@ public class ComplexFunction implements complex_function {
      * @param f1 - a given function that will be converted into Complex Function
      */
     public ComplexFunction(function f1) {
-        if (f1 instanceof ComplexFunction) {
-            ComplexFunction co = (ComplexFunction) f1;
-            right = co.right().copy();
-            left = co.left().copy();
-            op = co.getOp();
-        } else {
-            right = null;
-            left = f1.copy();
-            op = Operation.None;
-        }
+/*        if (f1 == null)
+            throw new RuntimeException("Function argument can't be null");
+        this.left = f1.copy();
+        this.op = Operation.None;*/if (f1 instanceof ComplexFunction) {
+        ComplexFunction co = (ComplexFunction) f1;
+        right = co.right().copy();
+        left = co.left().copy();
+        op = co.getOp();
+    } else {
+        right = null;
+        left = f1.copy();
+        op = Operation.None;
     }
+        }
 
     /**
      * This Method is a Constructor Of a Complex Function. it gets 3 Variables that represents an Operation
@@ -216,9 +219,19 @@ public class ComplexFunction implements complex_function {
      * @param right - a given Function that represents the Right side of the Complex Function that we will build
      */
     public ComplexFunction(String s, function left, function right) {
+        if (left== null)
+            throw new RuntimeException("Left function argument can't be null");
+        this.left = left.copy();
+        this.right = right == null ? null : right.copy();
+        this.op = Operation_String(s);
+
+        if (right == null && op == null) {
+            this.op = Operation.None;
+        }
+        /*
         this.right = right.copy();
         this.left = left.copy();
-        this.op = Operation_String(s);
+        this.op = Operation_String(s);*/
     }
 
     public ComplexFunction() {
@@ -304,6 +317,7 @@ public class ComplexFunction implements complex_function {
      */
     @Override
     public function initFromString(String s) {
+        s=s.replaceAll(" ","");
         ComplexFunction c=null;
         try {
             if (s.lastIndexOf(')')==s.length()-1) {

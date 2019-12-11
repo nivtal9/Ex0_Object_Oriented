@@ -1,8 +1,12 @@
 package Ex1Testing;
 
-import Ex1.Functions_GUI;
+import Ex1.*;
+import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
 
 import java.io.IOException;
+import java.util.Iterator;
+
 /**
  * Note: minor changes (thanks to Amichai!!)
  * The use of "get" was replaced by iterator!
@@ -20,13 +24,9 @@ import java.io.IOException;
  *
  */
 class Functions_GUITest {
-	public static void main(String[] a) throws IOException {
-		String str="function_file.txt";
-		Functions_GUI dt=new Functions_GUI();
-		dt.initFromFile(str);
+    public static void main(String[] a) throws IOException {
 
 
-/*
 		functions data = FunctionsFactory();
 	//	int w=1000, h=600, res=200;
 	//	Range rx = new Range(-10,10);
@@ -118,7 +118,7 @@ class Functions_GUITest {
 		}
 		ans.add(max);
 		ans.add(min);		
-		return ans;*/
+		return ans;
 	}
-}
+    }
 

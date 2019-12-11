@@ -1,38 +1,43 @@
 package Ex1;
 
+import com.google.gson.Gson;
+
 import java.awt.*;
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.Scanner;
 
 /**
  * This class is for presenting Complex Functions/Functions on a GUI window and can be saved (and load) to file.
  */
 public class Functions_GUI implements functions {
     ArrayList<function> func=new ArrayList<>();
+    Color[] Colors = {Color.blue, Color.cyan, Color.MAGENTA, Color.ORANGE, Color.red, Color.GREEN, Color.PINK};
     @Override
     /**
      * further description are in functions class
      */
     public void initFromFile(String file) throws IOException {
-        String line="";
-        try{
-            Scanner sc=new Scanner(new File(file));
-            while(sc.hasNextLine()){
-                line=sc.nextLine();
-                Monom m=new Monom(Monom.ZERO);
-                ComplexFunction co=new ComplexFunction(m);
-                func.add(co.initFromString(line));
+        String l = "";
+        FileReader fr=new FileReader(file);
+        try {
+            BufferedReader br = new BufferedReader(fr);
+            while ((l = br.readLine( )) != null) {
+                String str = l;
+                function f = new ComplexFunction().initFromString(str);
+
+                add(f);
             }
+            br.close();
         }
-        catch (Exception i){
-            i.printStackTrace();
-            throw new IOException("Read file has been corrupted");
+        catch (IOException e)
+        {
+            e.printStackTrace();
+
+            System.out.println("could not read file");
         }
+
     }
 
     /**
@@ -40,32 +45,62 @@ public class Functions_GUI implements functions {
      */
     @Override
     public void saveToFile(String file) throws IOException {
-        if (!file.isEmpty()) {
-            String str = "";
-            PrintWriter w=null;
-            w = new PrintWriter(file);
-            for (int j=0; j< size(); j++) {
-                str = this.func.get(j).toString();
-                w.println(str);
+        try {
+            File f=new File(file );
+            StringBuilder sb = new  StringBuilder();
+            PrintWriter pw = new  PrintWriter(f);
+            for (int i=0;i<this.size( );i++) {
+                String string=func.get( i).toString();
+                sb.append(string);sb.append("\n");
             }
-            w.close();
+            pw.write(sb.toString( ));
+
+            pw.close( );
         }
-        else{
-            throw new IOException("File is Empty");
+        catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Could not save file");
         }
+    }
+    public void Setters(Range x,Range y,int h,int w){
+        StdDraw.setCanvasSize(w, h);
+        StdDraw.setPenRadius(0.00345);
+        StdDraw.setFont();
+        StdDraw.setXscale(x.get_min(), x.get_max());
+        StdDraw.setYscale(y.get_min(), y.get_max());
+        StdDraw.line(x.get_min(), 0, x.get_max(), 0);
+        StdDraw.line(0, y.get_min(), 0, y.get_max());
     }
     /**
      * further description are in functions class
      */
     @Override
     public void drawFunctions(int width, int height, Range rx, Range ry, int resolution) {
-        Color[] Colors = {Color.blue, Color.cyan, Color.MAGENTA, Color.ORANGE, Color.red, Color.GREEN, Color.PINK};
+        Setters(rx,ry,height,width);
+        for (int i=0; i <this.size() ;i++) {
+            StdDraw.setPenColor(Colors[i % Colors.length]);
+            for(double x = rx.get_min(); x < rx.get_max(); x+=( (rx.get_max() - rx.get_min() ) /resolution) ) {
+                StdDraw.line(x, func.get(i).f(x), x+( (rx.get_max() - rx.get_min() ) /resolution)
+                        , func.get(i).f(x+( (rx.get_max() - rx.get_min( ) ) /resolution) ));
+            }
+        }
     }
     /**
      * further description are in functions class
      */
     @Override
     public void drawFunctions(String json_file) {
+        try
+        {
+            Gson g = new Gson();
+            FileReader r = new FileReader(json_file);
+            GUI_params p = g.fromJson(r , GUI_params.class);
+            drawFunctions(p.Width, p.Height, p.Range_X, p.Range_Y, p.Resolution);
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+            System.out.println("404 - File Not Found");
+        }
     }
 
     /**
