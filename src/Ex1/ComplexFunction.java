@@ -195,10 +195,7 @@ public class ComplexFunction implements complex_function {
      * @param f1 - a given function that will be converted into Complex Function
      */
     public ComplexFunction(function f1) {
-/*        if (f1 == null)
-            throw new RuntimeException("Function argument can't be null");
-        this.left = f1.copy();
-        this.op = Operation.None;*/if (f1 instanceof ComplexFunction) {
+if (f1 instanceof ComplexFunction) {
         ComplexFunction co = (ComplexFunction) f1;
         right = co.right().copy();
         left = co.left().copy();
