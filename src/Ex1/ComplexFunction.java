@@ -19,11 +19,17 @@ public class ComplexFunction implements complex_function {
  * @param f1 - the function that will get the Plus Operation with our Complex Function
  */
     public void plus(function f1) {
-        function f = new ComplexFunction(getOp().toString(), left(), right());
-        this.left = f.copy();
+        if(right!=null) {
+            function f = new ComplexFunction(getOp(), left, right);
+            this.left = f;
 
-        this.op = Operation.Plus;
-        this.right = f1.copy();
+            this.op = Operation.Plus;
+            this.right = f1.copy();
+        }
+        else{
+            this.right=f1;
+            this.op=Operation.Plus;
+        }
     }
 
     @Override
@@ -32,11 +38,17 @@ public class ComplexFunction implements complex_function {
      * @param f1 - the function that will get the Mult Operation with our Complex Function
      */
     public void mul(function f1) {
-         function f = new ComplexFunction(getOp().toString(), left, right);
-        this.left = f.copy();
+        if(right!=null) {
+            function f = new ComplexFunction(getOp(), left, right);
+            this.left = f;
 
-        this.op = Operation.Times;
-        this.right = f1.copy();
+            this.op = Operation.Times;
+            this.right = f1.copy();
+        }
+        else{
+            this.right=f1;
+            this.op=Operation.Times;
+        }
     }
 
     @Override
@@ -45,11 +57,17 @@ public class ComplexFunction implements complex_function {
      * @param f1 - the function that will get the Divid Operation with our Complex Function
      */
     public void div(function f1) {
-        function f = new ComplexFunction(getOp().toString(), left(), right());
-        this.left = f.copy();
+        if(right!=null) {
+            function f = new ComplexFunction(getOp(), left, right);
+            this.left = f;
 
-        this.op = Operation.Divid;
-        this.right = f1.copy();
+            this.op = Operation.Divid;
+            this.right = f1.copy();
+        }
+        else{
+            this.right=f1;
+            this.op=Operation.Divid;
+        }
     }
 
     @Override
@@ -58,11 +76,17 @@ public class ComplexFunction implements complex_function {
      * @param f1 - the function that will get the Max Operation with our Complex Function
      */
     public void max(function f1) {
-        function f = new ComplexFunction(getOp().toString(), left(), right());
-        this.left = f.copy();
+        if(right!=null) {
+            function f = new ComplexFunction(getOp(), left, right);
+            this.left = f;
 
-        this.op = Operation.Max;
-        this.right = f1.copy();
+            this.op = Operation.Max;
+            this.right = f1.copy();
+        }
+        else{
+            this.right=f1;
+            this.op=Operation.Max;
+        }
     }
 
     @Override
@@ -71,11 +95,17 @@ public class ComplexFunction implements complex_function {
      * @param f1 - the function that will get the Min Operation with our Complex Function
      */
     public void min(function f1) {
-        function f = new ComplexFunction(getOp().toString(), left(), right());
-        this.left = f.copy();
+        if(right!=null) {
+            function f = new ComplexFunction(getOp(), left, right);
+            this.left = f;
 
-        this.op = Operation.Min;
-        this.right = f1.copy();
+            this.op = Operation.Min;
+            this.right = f1.copy();
+        }
+        else{
+            this.right=f1;
+            this.op=Operation.Min;
+        }
     }
 
     @Override
@@ -84,11 +114,17 @@ public class ComplexFunction implements complex_function {
      * @Param f1 - the function that will get the Comp Operation with our Complex Function
      */
     public void comp(function f1) {
-        function f = new ComplexFunction(getOp().toString(), left(), right());
-        this.left = f.copy();
+        if(right!=null) {
+            function f = new ComplexFunction(getOp(), left, right);
+            this.left = f;
 
-        this.op = Operation.Comp;
-        this.right = f1.copy();
+            this.op = Operation.Comp;
+            this.right = f1.copy();
+        }
+        else{
+            this.right=f1;
+            this.op=Operation.Comp;
+        }
     }
 
     @Override

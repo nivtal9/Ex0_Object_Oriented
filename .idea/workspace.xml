@@ -4,8 +4,9 @@
     <list default="true" id="7377f670-f608-4ea8-bd8d-781a4a79ca43" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/function_file.txt" beforeDir="false" afterPath="$PROJECT_DIR$/function_file.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/ComplexFunction$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1/Functions_GUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Ex1/Ex1Testing/Functions_GUITest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/ComplexFunction.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1/Functions_GUI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Ex1Testing/Functions_GUITest.java" afterDir="false" />

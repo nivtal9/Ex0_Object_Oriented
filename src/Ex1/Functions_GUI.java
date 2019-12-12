@@ -1,6 +1,8 @@
 package Ex1;
 
 import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 
 import java.awt.*;
 import java.io.*;
@@ -106,17 +108,30 @@ public class Functions_GUI implements functions {
      */
     @Override
     public void drawFunctions(String json_file) {
-        try
-        {
-            Gson g = new Gson();
-            FileReader r = new FileReader(json_file);
-            GUI_params p = g.fromJson(r , GUI_params.class);
-            drawFunctions(p.Width, p.Height, p.Range_X, p.Range_Y, p.Resolution);
-        }
-        catch (Exception e) {
+        Gson gs = new Gson();
+        try {
+            FileReader fr=new FileReader(json_file);
+            BufferedReader br = new BufferedReader(fr);
+            Json_Helper(br,gs);
+        } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("404 - File Not Found");
+            System.out.println("Cannot process Json File");
         }
+
+    }
+    private void Json_Helper(BufferedReader br,Gson gs){
+        JsonObject JO = gs.fromJson(br, JsonObject.class);
+        int width = JO.get("Width").getAsInt();
+        int r = JO.get("Resolution").getAsInt();
+        int height = JO.get("Height").getAsInt();
+        JsonArray RangeParameters = JO.get("Range_X").getAsJsonArray();
+        int rx_left=RangeParameters.get(0).getAsInt(); int rx_right=RangeParameters.get(1).getAsInt();
+        Range rx = new Range(rx_left,rx_right);
+        RangeParameters = JO.get("Range_Y").getAsJsonArray();
+        int ry_left=RangeParameters.get(0).getAsInt(); int ry_right=RangeParameters.get(1).getAsInt();
+        Range ry = new Range(ry_left,ry_right);
+
+        drawFunctions(width, height, rx, ry, r);
     }
 
     /**

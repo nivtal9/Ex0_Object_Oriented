@@ -25,15 +25,6 @@ import java.util.Iterator;
  */
 class Functions_GUITest {
     public static void main(String[] a) throws IOException {
-		String string = "function_file.txt";
-		Functions_GUI dtsr = new Functions_GUI();
-		dtsr.initFromFile(string);
-		try{
-			dtsr.drawFunctions(1000, 600, new Range(-10, 10), new Range(-5, 15), 200);
-		}
-		catch (Exception e){
-			System.out.println("Failed stdr draw");
-		}
 		functions data = FunctionsFactory();
 		//	int w=1000, h=600, res=200;
 		//	Range rx = new Range(-10,10);
@@ -127,6 +118,18 @@ class Functions_GUITest {
 		ans.add(min);
 		return ans;
 	}
+    void ReadFromFunctionFile() throws IOException {
+        String string = "function_file.txt";
+        Functions_GUI dtsr = new Functions_GUI();
+        dtsr.initFromFile(string);
+        try{
+            dtsr.drawFunctions(1000, 600, new Range(-10, 10), new Range(-5, 15), 200);
+        }
+        catch (Exception e){
+            System.out.println("Failed stdr draw");
+        }
+    }
+
 
     }
 
