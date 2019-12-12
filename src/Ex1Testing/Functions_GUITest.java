@@ -53,7 +53,7 @@ class Functions_GUITest {
 		_data = FunctionsFactory();
 	}
 
-	//@Test
+	@Test
 	void testFunctions_GUI() {
 		//	fail("Not yet implemented");
 	}
