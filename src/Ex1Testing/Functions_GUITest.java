@@ -29,7 +29,7 @@ class Functions_GUITest {
 		Functions_GUI dtsr = new Functions_GUI();
 		dtsr.initFromFile(string);
 		try{
-			dtsr.drawFunctions(700, 400, new Range(-20, 20), new Range(-10, 10), 200);
+			dtsr.drawFunctions(1000, 600, new Range(-10, 10), new Range(-5, 15), 200);
 		}
 		catch (Exception e){
 			System.out.println("Failed stdr draw");

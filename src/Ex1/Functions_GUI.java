@@ -62,75 +62,30 @@ public class Functions_GUI implements functions {
             System.out.println("Could not save file");
         }
     }
-    public void Setters(Range x,Range y,int h,int w,int r){
-
-        StdDraw.setCanvasSize(w, h);
-        StdDraw.setPenRadius(0.00345);
+    public void Setters(Range rx,Range ry,int height,int width,int resolution) {
+        StdDraw.setCanvasSize(width, height);
+        StdDraw.setPenRadius(0.0045);
         StdDraw.setFont();
-        StdDraw.setXscale(x.get_min(), x.get_max());
-        StdDraw.setYscale(y.get_min(), y.get_max());
-        StdDraw.line(x.get_min(), 0, x.get_max(), 0);
-        StdDraw.line(0, y.get_min(), 0, y.get_max());
-/*        StdDraw.setPenColor(Color.BLACK);
-        for (int i = (int)x.get_min(); i <=x.get_max() ; i++) {
-            StdDraw.line(i,y.get_min(),i,y.get_max());
+        StdDraw.setXscale(rx.get_min(), rx.get_max());
+        StdDraw.setYscale(ry.get_min(), ry.get_max());
+        StdDraw.line(rx.get_min(), 0, rx.get_max(), 0);
+        StdDraw.line(0, ry.get_min(), 0, ry.get_max());
+        for (int j = (int)rx.get_min(); j < rx.get_max(); j=j+1) {
+            if(0!=j) {
+
+                StdDraw.line(j, -0.2, j, 0.2);
+
+                StdDraw.text(j, -0.5, j+"");
+            }
         }
-        for (int i = (int)y.get_min(); i < y.get_max(); i++) {
-            StdDraw.line(x.get_min(),i,x.get_max(),i);
+        for (int i = (int)ry.get_min(); i < ry.get_max(); i=i+1) {
+            if(0!=i) {
+
+                StdDraw.text(0.4, i, i+"");
+
+                StdDraw.line(-0.2, i, 0.2, i);
+            }
         }
-        StdDraw.setPenRadius(0.007);
-        StdDraw.line(x.get_min(),0,x.get_max(),0);
-        Font f =new Font("TimesNewRoman",Font.BOLD,10);
-        StdDraw.setFont(f);
-        for (int i = (int)x.get_min(); i <x.get_max() ; i++) {
-            StdDraw.text(i-0.05,-0.5,Integer.toString(i));
-        }
-        StdDraw.line(0,y.get_min(),0,y.get_max());
-        for (int i = (int)y.get_min(); i < y.get_max(); i++) {
-            StdDraw.text(x[r/2]-0.3,i-0.05,Integer.toString(i));
-        }*/
-/*        int n = 100;
-        double maxY = 2.0, minY = -2.0;
-// the function y = sin(4x), sampled at n+1 points
-// between x = 0 and x = pi
-        double[] arrx = new double[n+1];
-        double[] arry = new double[n+1];
-        for (int i = 0; i <= n; i++) {
-            arrx[i] = Math.PI * i / n;
-            arry[i] = Math.sin(4*arrx[i]);
-        }
-// rescale the coordinate system
-        StdDraw.setXscale(0, Math.PI);
-        StdDraw.setYscale(minY, maxY);
-//////// vertical lines
-        StdDraw.setPenColor(Color.LIGHT_GRAY);
-        for (int i = 0; i <= n; i=i+10) {
-            StdDraw.line(arrx[i], minY, arrx[i], maxY);
-        }
-//////// horizontal lines
-        for (double i = minY; i <= maxY; i=i+0.5) {
-            StdDraw.line(0, i, Math.PI, i);
-        }
-//////// x axis
-        StdDraw.setPenColor(Color.BLACK);
-        StdDraw.setPenRadius(0.005);
-        StdDraw.line(0, arry[n/2], Math.PI, arry[n/2]);
-        StdDraw.setFont(new Font("TimesRoman", Font.BOLD, 15));
-        for (int i = 0; i <= n; i=i+10) {
-            StdDraw.text(arrx[i]-0.07, -0.07, Integer.toString(i-n/2));
-        }
-//////// y axis
-        StdDraw.line(arrx[n/2], minY, arrx[n/2], maxY);
-        for (double i = minY; i <= maxY; i=i+0.5) {
-            StdDraw.text(arrx[n/2]-0.07, i+0.07, Double.toString(i));
-        }
-// plot the approximation to the function
-        for (int i = 0; i < n; i++) {
-            StdDraw.line(arrx[i], arry[i], arrx[i+1], arry[i+1]);
-        }
-        StdDraw.setPenColor(Color.RED);
-        StdDraw.setPenRadius(0.01);
-        StdDraw.point(arrx[n/2], 1);*/
     }
     /**
      * further description are in functions class

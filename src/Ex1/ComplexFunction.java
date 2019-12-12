@@ -32,7 +32,7 @@ public class ComplexFunction implements complex_function {
      * @param f1 - the function that will get the Mult Operation with our Complex Function
      */
     public void mul(function f1) {
-        function f = new ComplexFunction(getOp().toString(), left(), right());
+         function f = new ComplexFunction(getOp().toString(), left, right);
         this.left = f.copy();
 
         this.op = Operation.Times;
@@ -195,17 +195,19 @@ public class ComplexFunction implements complex_function {
      * @param f1 - a given function that will be converted into Complex Function
      */
     public ComplexFunction(function f1) {
-if (f1 instanceof ComplexFunction) {
-        ComplexFunction co = (ComplexFunction) f1;
-        right = co.right().copy();
-        left = co.left().copy();
-        op = co.getOp();
-    } else {
-        right = null;
-        left = f1.copy();
-        op = Operation.None;
-    }
+        if (f1 instanceof ComplexFunction)
+        {
+            ComplexFunction co = (ComplexFunction) f1;
+            right = co.right().copy();
+            left = co.left().copy();
+            op = co.getOp();
         }
+        else {
+            right = null;
+            left = f1.copy();
+            op = Operation.None;
+        }
+    }
 
     /**
      * This Method is a Constructor Of a Complex Function. it gets 3 Variables that represents an Operation
